@@ -1,0 +1,39 @@
+.calculator-frame {
+    display:flex;
+    justify-content:center;
+    margin: 0 auto;
+    
+    
+}
+
+.numbers1-9{
+    display: flex;
+    flex-direction: column-reverse;
+    
+    
+    
+}
+
+.number-row {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.numbers1-9 button {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.num0 button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.calc-functions {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
