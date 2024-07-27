@@ -1,6 +1,6 @@
 let num1 
 let num2 
-let operator 
+let operator = '';
 
 const one = document.getElementById('1');
 const two = document.getElementById('2');
@@ -117,6 +117,8 @@ function handleClick(event){
         
     }else if(id === 'clear'){
         screen.value = '';
+        num1 = 0;
+        num2 = 0;
     }
     
 }
