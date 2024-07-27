@@ -11,13 +11,14 @@ const six = document.getElementById('6');
 const seven = document.getElementById('7');
 const eight = document.getElementById('8');
 const nine = document.getElementById('9');
-const zero = document.getElementById('zer0');
+const zero = document.getElementById('zero');
 const period = document.getElementById('period');
 const equals = document.getElementById('equals');
 const addition = document.getElementById('+');
 const subtraction = document.getElementById('-');
 const multiplication = document.getElementById('x');
 const division = document.getElementById('/');
+const clear = document.getElementById('clear');
 
 
 function add(num1, num2){
@@ -52,40 +53,54 @@ function operate(num1, num2, operator){
 //Function to handle clicked buttons
 function handleClick(event){
     const id = event.target.id;
-    if(id === 'one'){
-
-    }else if(id === 'one'){
+    const screen = document.getElementById('number-screen');
+    if(id === '1'){
+        screen.value += 1;
         
-    }else if(id === 'two'){
+    }else if(id === '2'){
+        screen.value +=2;
         
-    }else if(id === 'three'){
+    }else if(id === '3'){
+        screen.value += 3;
         
-    }else if(id === 'four'){
+    }else if(id === '4'){
+        screen.value += 4;
         
-    }else if(id === 'five'){
+    }else if(id === '5'){
+        screen.value += 5;
         
-    }else if(id === 'six'){
+    }else if(id === '6'){
+        screen.value += 6;
         
-    }else if(id === 'seven'){
+    }else if(id === '7'){
+        screen.value += 7;
         
-    }else if(id === 'eight'){
+    }else if(id === '8'){
+        screen.value += 8;
         
-    }else if(id === 'nine'){
+    }else if(id === '9'){
+        screen.value += 9;
         
     }else if(id === 'zero'){
+        screen.value += 0;
         
     }else if(id === 'period'){
+        if (!screen.value.includes('.')) {
+            screen.value += '.';
+        }
         
     }else if(id === 'equals'){
         
-    }else if(id === 'addition'){
+    }else if(id === '+'){
         
-    }else if(id === 'subtraction'){
+    }else if(id === '-'){
         
-    }else if(id === 'multiplication'){
+    }else if(id === 'x'){
         
-    }else if(id === 'division'){
+    }else if(id === '/'){
         
+    }else if(id === 'clear'){
+        screen.value = '';
     }
     
 }
@@ -106,3 +121,4 @@ addition.addEventListener('click', handleClick);
 subtraction.addEventListener('click', handleClick);
 multiplication.addEventListener('click', handleClick);
 division.addEventListener('click', handleClick);
+clear.addEventListener('click', handleClick);
