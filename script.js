@@ -40,13 +40,13 @@ function divide(num1, num2){
 //Function to take in number paramaters and selected operator to perform calculation
 function operate(num1, num2, operator){
     if(operator == "+"){
-        add(num1, num2);
+        return add(num1, num2);
     }else if(operator == "-"){
-        subtract(num1, num2);
+        return subtract(num1, num2);
     }else if(operator == "*"){
-        multiply(num1, num2);
+        return multiply(num1, num2);
     }else if(operator == "/"){
-        divide(num1, num2);
+        return divide(num1, num2);
     }
 }
 
@@ -90,14 +90,30 @@ function handleClick(event){
         }
         
     }else if(id === 'equals'){
+        num2 = parseFloat(screen.value);
+        let result = operate(num1, num2, operator);
+        screen.value = result;
+
         
     }else if(id === '+'){
+        num1 = parseFloat(screen.value);
+        operator = "+";
+        screen.value = '';
         
     }else if(id === '-'){
+        num1 = parseFloat(screen.value);
+        operator = "-";
+        screen.value = '';
         
     }else if(id === 'x'){
+        num1 = parseFloat(screen.value);
+        operator = "*";
+        screen.value = '';
         
     }else if(id === '/'){
+        num1 = parseFloat(screen.value);
+        operator = "/";
+        screen.value = '';
         
     }else if(id === 'clear'){
         screen.value = '';
